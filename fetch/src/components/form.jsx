@@ -54,30 +54,30 @@ export default function Form () {
     <div className="form">
         <form onSubmit={handleSubmit}>
           <p>
-            <input type="text" placeholder="Full Name" required name="name" onChange={handleChange}/>
+            <input type="text" placeholder="Full Name" required name="name" onChange={handleChange} className="text-input"/>
           </p>
           <p>
-            <input type="email" placeholder="Email" required name="email" onChange={handleChange}/>
+            <input type="email" placeholder="Email" required name="email" onChange={handleChange} className="text-input"/>
           </p>
           <p>
-            <input type="password" placeholder="Password" required name="password" onChange={handleChange}/>
+            <input type="password" placeholder="Password" required name="password" onChange={handleChange} className="text-input"/>
           </p>
           <p>
-            <select onChange={handleChange} required name="occupation" defaultValue="">
+            <select onChange={handleChange} required name="occupation" defaultValue="" className="input-dropdown">
               <option value="" key="noOccupation" disabled >Occupation</option>
               {occupations.map((occupation, index) => <option key={`occupation-${index}`} value={occupation}>{occupation}</option>)}
             </select>
           </p>
           <p>
-            <select onChange={handleChange} required name="state" defaultValue="">
+            <select onChange={handleChange} required name="state" defaultValue="" className="input-dropdown">
               <option value="" key="noState" disabled >State</option>
               {states.map((state, index) => <option key={`state-${index}`} value={state}>{state}</option>)}
             </select>
           </p>
-          <button type="submit">Submit</button>
+          <button type="submit" className="submit-button">Submit</button>
         </form>
-        {success && <h2>Submitted</h2>}
-        {error && <h2>Error. Try again.</h2>}
+        {success && <h2 className="submit-message">Submitted</h2>}
+        {error && <h2 className="submit-message">Error. Try again.</h2>}
     </div>
   );
 }

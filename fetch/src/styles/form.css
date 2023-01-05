@@ -1,4 +1,4 @@
-input, select, button {
+.text-input, .input-dropdown, .submit-button {
   width: 190px;
   border: 1px solid white;
   background-color: rgb(255, 157, 43);
@@ -6,11 +6,11 @@ input, select, button {
   box-sizing: border-box;
 }
 
-input::placeholder, h2 {
+input::placeholder, .submit-message {
   color: white;
 }
 
-button {
+.submit-button {
   border: 2px solid white;
   font-weight: bold;
 }
