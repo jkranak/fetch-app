@@ -1,7 +1,7 @@
 input, select, button {
   width: 190px;
   border: 1px solid white;
-  background-color: rgba(255, 157, 43, .4);
+  background-color: rgb(255, 157, 43);
   color: white;
   box-sizing: border-box;
 }

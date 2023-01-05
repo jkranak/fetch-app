@@ -18,7 +18,6 @@ export async function initData() {
 export async function submitData (formdata) {
   try {
     const response = await axios.post(fetchUrl, formdata);
-    console.log(response);
     if (response.status === 201) {
       return true
     } else {

@@ -33,10 +33,11 @@ export default function Form () {
 
   async function handleSubmit (event) {
     event.preventDefault();
+    // If either error or success message is being displayed, this clears it
     setError(false);
+    setSuccess(false);
     try {
       const response = await submitData(formData);
-      console.log(response);
       if (response) {
         setSuccess(true);
         event.target.reset();
@@ -51,7 +52,6 @@ export default function Form () {
   
   return (
     <div className="form">
-
         <form onSubmit={handleSubmit}>
           <p>
             <input type="text" placeholder="Full Name" required name="name" onChange={handleChange}/>
